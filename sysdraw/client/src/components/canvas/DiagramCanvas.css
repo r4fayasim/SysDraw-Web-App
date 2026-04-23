@@ -1,0 +1,82 @@
+/* ─── Canvas Wrapper ─────────────────────────────────────────────────────────── */
+.canvas-wrap {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  background: #f0eef8;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Mini toolbar above canvas ── */
+.canvas-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px 8px;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.canvas-toolbar-btn {
+  width: 28px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--gray-600);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.canvas-toolbar-btn:hover { background: var(--gray-100); color: var(--primary); }
+
+.canvas-toolbar-sep {
+  width: 1px;
+  height: 18px;
+  background: var(--border);
+  margin: 0 4px;
+}
+
+/* ── Fabric canvas fills remaining space ── */
+.canvas-wrap canvas {
+  display: block;
+  flex: 1;
+  cursor: default;
+}
+
+/* ── Zoom bar bottom-right ── */
+.canvas-zoom-bar {
+  position: absolute;
+  bottom: 10px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  padding: 3px 10px;
+  font-size: 12px;
+  color: var(--text-dark);
+  box-shadow: var(--shadow-sm);
+}
+
+.canvas-zoom-bar button {
+  background: none;
+  border: none;
+  font-size: 15px;
+  color: var(--text-medium);
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 2px;
+  transition: color 0.15s;
+}
+
+.canvas-zoom-bar button:hover { color: var(--primary); }
+.canvas-zoom-label { min-width: 36px; text-align: center; font-family: var(--font-mono); font-size: 11px; }

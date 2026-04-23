@@ -1,0 +1,18 @@
+[
+  {
+    "id": "ea8d976a-3a0b-456f-b71b-b38ce997442f",
+    "fullName": "Test User",
+    "username": "testuser",
+    "email": "test@test.com",
+    "password": "$2a$12$N1tFjR.KniGV3kQkDPX1zuU3pmu5/zdRkvQaU4GWUY85TbnjO0rUe",
+    "createdAt": "2026-04-19T15:52:50.856Z"
+  },
+  {
+    "id": "159d09fd-155d-43a9-97ac-8e81a58e83a8",
+    "fullName": "Demo User",
+    "username": "demo_1776614228834",
+    "email": "demo1776614228834@x.com",
+    "password": "$2a$12$kvUNYHN/obYQ4FPYN9e/4eTLduB9Y6YKmQX8Hkv/WQ3mvFJl.SYFC",
+    "createdAt": "2026-04-19T15:57:09.301Z"
+  }
+]

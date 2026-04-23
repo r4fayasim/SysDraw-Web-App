@@ -1,0 +1,90 @@
+/* ─── SysDraw Global Styles ─────────────────────────────────────────────────── */
+:root {
+  /* Color palette from UI images */
+  --primary: #7c6ef7;
+  --primary-dark: #6558d4;
+  --primary-light: #a89cf8;
+  --primary-bg: #eeeaf8;
+  --bg-main: #f0eef8;
+  --bg-right: #c8c0ef;
+  --white: #ffffff;
+  --gray-50: #f9f9fb;
+  --gray-100: #f0f0f5;
+  --gray-200: #e0e0ea;
+  --gray-400: #9999b5;
+  --gray-600: #555570;
+  --gray-800: #222235;
+  --text-dark: #1a1a2e;
+  --text-medium: #555570;
+  --text-light: #9999b5;
+  --danger: #f05252;
+  --success: #22c55e;
+  --border: #dddde8;
+
+  /* Typography */
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  /* Spacing */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(124, 110, 247, 0.1);
+  --shadow-md: 0 4px 16px rgba(124, 110, 247, 0.15);
+  --shadow-lg: 0 8px 32px rgba(124, 110, 247, 0.2);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  background: var(--bg-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; font-family: inherit; }
+input, textarea { font-family: inherit; }
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--gray-200); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--primary-light); }
+
+/* ─── Utility classes ─────────────────────────────────────────────────────── */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.gap-4 { gap: 4px; }
+.gap-8 { gap: 8px; }
+.gap-12 { gap: 12px; }
+.gap-16 { gap: 16px; }
+.w-full { width: 100%; }
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}

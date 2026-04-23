@@ -1,0 +1,156 @@
+/* ─── Editor Page ────────────────────────────────────────────────────────────── */
+.editor-root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── Main body: sidebar + canvas + right panel ── */
+.editor-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ── Save status strip ── */
+.editor-save-status {
+  font-size: 11px;
+  text-align: center;
+  padding: 2px;
+  background: #fff8e1;
+  color: #e0a000;
+  border-bottom: 1px solid #f0d070;
+}
+
+/* ── Welcome screen (no project) ── */
+.editor-welcome {
+  position: absolute;
+  inset: 44px 0 0 196px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(240, 238, 248, 0.92);
+  z-index: 50;
+}
+
+.editor-welcome-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  padding: 48px 56px;
+  text-align: center;
+  max-width: 380px;
+}
+
+.editor-welcome-card h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+
+.editor-welcome-card p {
+  font-size: 14px;
+  color: var(--text-medium);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.editor-new-btn {
+  height: 42px;
+  padding: 0 28px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-full);
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+  box-shadow: var(--shadow-md);
+}
+
+.editor-new-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* ── FAB ── */
+.editor-fab {
+  position: fixed;
+  bottom: 28px;
+  right: 200px; /* Account for right panel */
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  border: none;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, transform 0.15s;
+  z-index: 80;
+}
+
+.editor-fab:hover { background: var(--primary-dark); transform: scale(1.08); }
+
+/* ── Project pill bar (leftmost edge, vertical) ── */
+.editor-project-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 196px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 10px;
+  background: var(--white);
+  border-top: 1px solid var(--border);
+  z-index: 90;
+  overflow-x: auto;
+}
+
+.editor-project-pill {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--primary-bg);
+  color: var(--primary);
+  border: 1.5px solid var(--primary-light);
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s, color 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.editor-project-pill.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.editor-project-pill--add {
+  background: transparent;
+  border-style: dashed;
+  color: var(--gray-400);
+}
+
+.editor-project-pill--add:hover {
+  background: var(--primary-bg);
+  color: var(--primary);
+  border-color: var(--primary);
+}

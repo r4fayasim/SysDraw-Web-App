@@ -1,0 +1,16 @@
+{
+  "name": "sysdraw",
+  "version": "1.0.0",
+  "description": "SysDraw - Online Design Tool & CASE Platform",
+  "scripts": {
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "dev": "concurrently \"npm run server\" \"npm run client\" --names \"API,UI\" --prefix-colors \"blue,magenta\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "start": "concurrently \"cd server && node server.js\" \"cd client && npm start\"",
+    "build": "cd client && npm run build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
